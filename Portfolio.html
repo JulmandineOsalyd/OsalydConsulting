@@ -1006,8 +1006,8 @@
             },
             {
                 title: {
-                    fr: "Classement automatisé des contrats vers une contrathèque",
-                    en: "Automated classification of contracts into a contract library"
+                    fr: "Classement automatisé des contrats vers une Contrathèque",
+                    en: "Automated classification of contracts into a Contract library"
                 },
 
                 mainTool: "Power Automate",
@@ -1029,11 +1029,28 @@
 
                 solution: {
 
-                    fr: "<p>Un flux Power Automate qui ouvre un <b>formulaire de saisie des métadonnées</b> (fournisseur, montant, échéance, etc.), puis déplace le contrat vers une bibliothèque SharePoint dédiée.</p><p class=\"saut-ligne\">Couplé à un <b>moteur de recherche avec filtres avancés</b> pour retrouver instantanément les contrats grâce aux métadonnées renseignées.</p>",
-                    en: "<p>A Power Automate flow that opens a <b>metadata entry form</b> (vendor, amount, expiry date, etc.), then moves the contract to a dedicated SharePoint library.</p><p class=\"saut-ligne\">Coupled with an <b>advanced filtering search engine</b> to instantly retrieve contracts using the entered metadata.</p>"
+                    fr: "<p>Un flux Power Automate qui ouvre un <b>formulaire de saisie des métadonnées</b> (fournisseur, montant, échéance, etc.), puis déplace le contrat vers une bibliothèque SharePoint dédiée.</p><p class=\"saut-ligne\">Un <b>moteur de recherche avec filtres avancés</b> pour retrouver instantanément les contrats grâce aux métadonnées renseignées.</p>",
+                    en: "<p>A Power Automate flow that opens a <b>metadata entry form</b> (vendor, amount, expiry date, etc.), then moves the contract to a dedicated SharePoint library.</p><p class=\"saut-ligne\">An <b>advanced filtering search engine</b> to instantly retrieve contracts using the entered metadata.</p>"
                 },
 
-                screenshots: [],
+                screenshots: [
+                    {
+                        url: "https://www.osalydconsulting.com/media/files/ImagesBook/Contratheque/Contratheque-BoutonEnvoi.png",
+                        title: { fr: "1. Bouton d'envoi vers la contrathèque", en: "1. Send to contract library button" }
+                    },
+                    {
+                        url: "https://www.osalydconsulting.com/media/files/ImagesBook/Contratheque/Contratheque-Form.png",
+                        title: { fr: "2. Formulaire de saisie des métadonnées", en: "2. Metadata entry form" }
+                    },
+                    {
+                        url: "https://www.osalydconsulting.com/media/files/ImagesBook/Contratheque/Contratheque-Classement.png",
+                        title: { fr: "3. Document déplacé dans la contrathèque", en: "3. Document moved to the contract library" }
+                    },
+                    {
+                        url: "https://www.osalydconsulting.com/media/files/ImagesBook/Contratheque/Contratheque-Recherche.png",
+                        title: { fr: "4. Moteur de recherche avancé", en: "4. Advanced search engine" }
+                    },
+                ],
 
                 features: {
                     fr: [
@@ -1059,29 +1076,32 @@
 
                 userBenefits: {
                     fr: [
-                        "Classement guidé en quelques clics grâce à un formulaire structuré.",
-                        "Temps de recherche divisé par 3 grâce au moteur de recherche et aux filtres avancés",
-                        "Alertes proactives dans Teams pour anticiper les renouvellement de contrats"
+                        "<b>Classement guidé</b> en quelques clics grâce à un formulaire structuré.",
+                        "Temps de recherche <b>divisé par 3</b> grâce au moteur de recherche et aux filtres avancés",
+                        "<b>Alertes</b> proactives dans Teams pour anticiper les renouvellement de contrats"
                     ],
                     en: [
-                        "Guided classification in a few clicks thanks to a structured form.",
-                        "Search time divided by 3 thanks to the search engine and advanced filters",
-                        "Proactive Teams alerts to anticipate contract renewals"
+                        "<b>Guided classification</b> in a few clicks thanks to a structured form.",
+                        "Search time <b>divided by 3</b> thanks to the search engine and advanced filters",
+                        "Proactive Teams <b>alerts</b>  to anticipate contract renewals"
                     ],
 
                 },
 
                 businessValue: {
                     fr: [
-                        "Réduction du temps perdu à rechercher des contrats et amélioration de la productivité de l’équipe Achats",
-                        "Réduction des risques : meilleur suivi des échéances et du statut contractuel",
-                        "Gouvernance documentaire renforcée : bibliothèque unique des contrats signés, exploitable par la recherche"
+                        "<b>Réduction des risques contractuels</b> grâce aux alertes automatiques",
+                        "<b>Gouvernance documentaire</b> renforcée et auditable",
+                        "<b>Gain de productivité</b> immédiat : moins de temps perdu à chercher, plus de temps à négocier"
+
                     ],
                     en: [
-                        "Reduced time spent searching for contracts and improved productivity for the Procurement team",
-                        "Risk reduction: better monitoring of contract expiry dates and status",
-                        "Stronger document governance: single source of truth for signed contracts, searchable and filterable"
-                    ]
+                        "<b>Reduced contractual risk</b> thanks to automated alerts",
+                        "<b>Strengthened document governance</b> ready for audits",
+                        "<b>Immediate productivity gain</b>: less time searching, more time negotiating"
+                    ],
+
+
                 }
             }
 
