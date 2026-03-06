@@ -1,0 +1,75 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const formattedDate = post.data.pubDate.toLocaleDateString("fr-FR", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+});
+---
+
+<Layout title={post.data.title} description={post.data.description} ogImage={post.data.cover}>
+  <article class="post wrapper">
+    <header class="post__header">
+      <h1 class="post__title">{post.data.title}</h1>
+
+      <div class="post__meta">
+        {
+          post.data.author.avatar && (
+            <img
+              src={post.data.author.avatar}
+              alt={post.data.author.name}
+              class="post__author-thumb"
+              width="40"
+              height="40"
+              loading="lazy"
+            />
+          )
+        }
+        <a href={post.data.author.href} class="post__author">
+          {post.data.author.name}
+        </a>
+        <time datetime={post.data.pubDate.toISOString().slice(0, 16)}>
+          {formattedDate}
+        </time>
+
+        {
+          post.data.tags.length > 0 && (
+            <div class="feed__tags">
+              {post.data.tags.map((tag) => (
+                <a href={`/tags/${tag}/`}>#{tag}</a>
+              ))}
+            </div>
+          )
+        }
+      </div>
+    </header>
+
+    {
+      post.data.cover && (
+        <img
+          src={post.data.cover}
+          alt={post.data.coverAlt ?? ""}
+          class="post__cover"
+          loading="lazy"
+        />
+      )
+    }
+
+    <div class="post__content">
+      <Content />
+    </div>
+  </article>
+</Layout>

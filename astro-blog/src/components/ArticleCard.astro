@@ -1,0 +1,90 @@
+---
+interface Props {
+  title: string;
+  slug: string;
+  excerpt: string;
+  pubDate: Date;
+  cover?: string;
+  coverAlt?: string;
+  author: {
+    name: string;
+    href: string;
+    avatar?: string;
+  };
+  tags?: string[];
+}
+
+const {
+  title,
+  slug,
+  excerpt,
+  pubDate,
+  cover,
+  coverAlt = "",
+  author,
+  tags = [],
+} = Astro.props;
+
+const formattedDate = pubDate.toLocaleDateString("fr-FR", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+});
+
+const isoDate = pubDate.toISOString().slice(0, 16);
+---
+
+<article class="feed__item feed__item--centered">
+  {
+    cover && (
+      <figure class="feed__image">
+        <a href={`/${slug}/`} aria-hidden="true" tabindex="-1">
+          <img
+            src={cover}
+            alt={coverAlt}
+            width="200"
+            height="200"
+            loading="lazy"
+          />
+        </a>
+      </figure>
+    )
+  }
+
+  <div class="feed__content">
+    <header>
+      <div class="feed__meta">
+        {
+          author.avatar && (
+            <img
+              src={author.avatar}
+              alt={author.name}
+              class="feed__author-thumb"
+              width="40"
+              height="40"
+              loading="lazy"
+            />
+          )
+        }
+        <a href={author.href} class="feed__author">{author.name}</a>
+        <time datetime={isoDate} class="feed__date">{formattedDate}</time>
+      </div>
+
+      <h2 class="feed__title">
+        <a href={`/${slug}/`}>{title}</a>
+      </h2>
+    </header>
+
+    <p>{excerpt}</p>
+
+    {
+      tags.length > 0 && (
+        <div class="feed__tags">
+          {tags.map((tag) => (
+            <a href={`/tags/${tag}/`}>#{tag}</a>
+          ))}
+        </div>
+      )
+    }
+  </div>
+</article>

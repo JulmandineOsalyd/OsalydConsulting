@@ -1,0 +1,116 @@
+---
+const navItems = [
+  { label: "Accueil", href: "/" },
+  { label: "Qui suis-je ?", href: "/auteur/julie-bredeche/" },
+  { label: "🥇 Ma méthode", href: "/ma-methode-infaillible/" },
+  {
+    label: 'Série "Agents Copilot de A à Z"',
+    href: "/serie-agents-copilot/",
+    submenu: [
+      { label: "E1 : L'art du prompt", href: "/art-du-prompting/" },
+      { label: "E2 : Qu'est un agent Copilot ?", href: "/agent-copilot/" },
+      {
+        label: "E3 : Votre premier agent déclaratif",
+        href: "/creer-un-agent-avec-copilot-chat/",
+      },
+      {
+        label: "E4 : Quel agent avec quelle licence ?",
+        href: "/agents-declaratifs-copilot-licensing/",
+      },
+    ],
+  },
+];
+
+const currentPath =
+  typeof Astro !== "undefined" ? new URL(Astro.request.url).pathname : "/";
+---
+
+<header class="top js-header">
+  <a class="logo" href="/">Julie BREDECHE</a>
+
+  <nav class="navbar js-navbar" aria-label="Navigation principale">
+    <button
+      class="navbar__toggle js-toggle"
+      aria-label="Menu"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      <span class="navbar__toggle-box">
+        <span class="navbar__toggle-inner">Menu</span>
+      </span>
+    </button>
+
+    <ul class="navbar__menu">
+      {
+        navItems.map((item) => (
+          <li
+            class={[
+              currentPath === item.href ? "active" : "",
+              item.submenu ? "has-submenu" : "",
+            ]
+              .filter(Boolean)
+              .join(" ")}
+          >
+            <a
+              href={item.href}
+              aria-haspopup={item.submenu ? "true" : undefined}
+            >
+              {item.label}
+            </a>
+
+            {item.submenu && (
+              <ul class="navbar__submenu level-2" aria-hidden="true">
+                {item.submenu.map((sub) => (
+                  <li>
+                    <a href={sub.href}>{sub.label}</a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+
+  <div class="search">
+    <button class="search__btn btn--icon js-search-btn" aria-label="Rechercher">
+      <!-- Icône loupe SVG inline -->
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        role="presentation"
+        focusable="false"
+        aria-hidden="true"
+      >
+        <circle cx="11" cy="11" r="7"></circle>
+        <line x1="16.5" y1="16.5" x2="22" y2="22"></line>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const toggle = document.querySelector(".js-toggle");
+  const menu = document.querySelector(".navbar__menu");
+
+  if (toggle && menu) {
+    toggle.addEventListener("click", () => {
+      const isOpen = menu.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+    });
+  }
+
+  // Mobile submenu toggle
+  document.querySelectorAll(".has-submenu > a").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      if (window.innerWidth <= 640) {
+        e.preventDefault();
+        const parent = (e.currentTarget as HTMLElement).closest(".has-submenu");
+        parent?.classList.toggle("is-open");
+      }
+    });
+  });
+</script>

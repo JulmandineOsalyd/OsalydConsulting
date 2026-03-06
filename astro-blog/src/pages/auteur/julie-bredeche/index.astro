@@ -1,0 +1,60 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import ArticleCard from "../../../components/ArticleCard.astro";
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("blog", ({ data }) => !data.draft);
+const posts = allPosts.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<Layout
+  title="Julie BREDECHE – Consultante SharePoint & Copilot | Osalyd Consulting"
+  description="Freelance spécialiste Microsoft SharePoint, Power Automate, PowerApps et Copilot Studio."
+>
+  <div class="page--author wrapper">
+    <div class="page--author__wrapper">
+      <img
+        src="/media/website/Julie-Bredeche.png"
+        alt="Julie BREDECHE"
+        class="page--author__avatar"
+        width="80"
+        height="80"
+        loading="lazy"
+      />
+      <h1>Julie BREDECHE</h1>
+      <p class="page__desc">
+        Consultante Freelance – Spécialiste Microsoft 365 : SharePoint, Power
+        Automate, PowerApps &amp; Copilot Studio
+      </p>
+      <p class="page__desc" style="margin-top:0.75rem">
+        <a
+          href="https://www.linkedin.com/in/juliebredeche/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="color: var(--color)"
+        >
+          LinkedIn
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <div class="wrapper feed" style="margin-top: 1.5rem">
+    {
+      posts.map((post) => (
+        <ArticleCard
+          title={post.data.title}
+          slug={post.slug}
+          excerpt={post.data.description}
+          pubDate={post.data.pubDate}
+          cover={post.data.cover}
+          coverAlt={post.data.coverAlt}
+          author={post.data.author}
+          tags={post.data.tags}
+        />
+      ))
+    }
+  </div>
+</Layout>

@@ -1,0 +1,55 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ArticleCard from "../../components/ArticleCard.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  const allTags = [...new Set(posts.flatMap((post) => post.data.tags))];
+
+  return allTags.map((tag) => ({
+    params: { tag },
+    props: {
+      tag,
+      posts: posts
+        .filter((post) => post.data.tags.includes(tag))
+        .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()),
+    },
+  }));
+}
+
+const { tag, posts } = Astro.props;
+---
+
+<Layout
+  title={`#${tag} – Osalyd Consulting`}
+  description={`Articles sur le sujet : ${tag}`}
+>
+  <div class="hero hero--noimage">
+    <header class="hero__content">
+      <div class="wrapper">
+        <h2 class="align-center">#{tag}</h2>
+        <p class="align-center" style="color: var(--gray); font-size: 0.9rem">
+          {posts.length} article{posts.length > 1 ? "s" : ""}
+        </p>
+      </div>
+    </header>
+  </div>
+
+  <div class="wrapper feed">
+    {
+      posts.map((post) => (
+        <ArticleCard
+          title={post.data.title}
+          slug={post.slug}
+          excerpt={post.data.description}
+          pubDate={post.data.pubDate}
+          cover={post.data.cover}
+          coverAlt={post.data.coverAlt}
+          author={post.data.author}
+          tags={post.data.tags}
+        />
+      ))
+    }
+  </div>
+</Layout>
