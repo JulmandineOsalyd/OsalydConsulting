@@ -1,17 +1,60 @@
-<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Power Automate + AI Builder : des centaines d’heures gagnées grâce à la lecture automatique de PDF - Julie BREDECHE</title><meta name="description" content="Julie BREDECHE"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="canonical" href="https://www.osalydconsulting.com/tuto-extraire-une-information-specifique-dun-pdf/"><link rel="alternate" type="application/atom+xml" href="https://www.osalydconsulting.com/feed.xml" title="Julie BREDECHE - RSS"><link rel="alternate" type="application/json" href="https://www.osalydconsulting.com/feed.json" title="Julie BREDECHE - JSON"><meta property="og:title" content="Power Automate + AI Builder : des centaines d’heures gagnées grâce à la lecture automatique de PDF"><meta property="og:image" content="https://www.osalydconsulting.com/media/posts/16/Vignette-Power-Automate-2.png"><meta property="og:image:width" content="200"><meta property="og:image:height" content="200"><meta property="og:site_name" content="Julie Bredeche | Consultante SharePoint & Copilot – Osalyd Consulting"><meta property="og:description" content="Julie BREDECHE"><meta property="og:url" content="https://www.osalydconsulting.com/tuto-extraire-une-information-specifique-dun-pdf/"><meta property="og:type" content="article"><link rel="stylesheet" href="https://www.osalydconsulting.com/assets/css/style.css?v=7801138491732e44bcc8642508f48e76"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.osalydconsulting.com/tuto-extraire-une-information-specifique-dun-pdf/"},"headline":"Power Automate + AI Builder : des centaines d’heures gagnées grâce à la lecture automatique de PDF","datePublished":"2025-11-24T13:47+01:00","dateModified":"2026-01-05T14:31+01:00","image":{"@type":"ImageObject","url":"https://www.osalydconsulting.com/media/posts/16/Vignette-Power-Automate-2.png","height":200,"width":200},"description":"Julie BREDECHE","author":{"@type":"Person","name":"Julie BREDECHE","url":"https://www.osalydconsulting.com/authors/julie-bredeche/"},"publisher":{"@type":"Organization","name":"Julie BREDECHE"}}</script><noscript><style>img[loading] {
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Power Automate + AI Builder : des centaines d’heures gagnées grâce à la lecture automatique de PDF - Julie BREDECHE</title>
+        <meta name="description" content="Julie BREDECHE">
+         
+        <meta name="generator" content="Publii Open-Source CMS for Static Site">
+
+        <link rel="canonical" href="https://www.osalydconsulting.com/tuto-extraire-une-information-specifique-dun-pdf/">
+        <link rel="alternate" type="application/atom+xml" href="https://www.osalydconsulting.com/feed.xml" title="Julie BREDECHE - RSS">
+<link rel="alternate" type="application/json" href="https://www.osalydconsulting.com/feed.json" title="Julie BREDECHE - JSON">
+
+        <meta property="og:title" content="Power Automate + AI Builder : des centaines d’heures gagnées grâce à la lecture automatique de PDF"><meta property="og:image" content="https://www.osalydconsulting.com/media/posts/16/Vignette-Power-Automate-2.png"><meta property="og:image:width" content="200"><meta property="og:image:height" content="200"><meta property="og:site_name" content="Julie Bredeche | Consultante SharePoint & Copilot – Osalyd Consulting"><meta property="og:description" content="Julie BREDECHE"><meta property="og:url" content="https://www.osalydconsulting.com/tuto-extraire-une-information-specifique-dun-pdf/"><meta property="og:type" content="article">
+        
+        <link rel="stylesheet" href="https://www.osalydconsulting.com/assets/css/style.css?v=5a80335d7c5249e4b964a6243cfa4bc0">
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.osalydconsulting.com/tuto-extraire-une-information-specifique-dun-pdf/"},"headline":"Power Automate + AI Builder : des centaines d’heures gagnées grâce à la lecture automatique de PDF","datePublished":"2025-11-24T13:47+01:00","dateModified":"2026-01-05T14:31+01:00","image":{"@type":"ImageObject","url":"https://www.osalydconsulting.com/media/posts/16/Vignette-Power-Automate-2.png","height":200,"width":200},"description":"Julie BREDECHE","author":{"@type":"Person","name":"Julie BREDECHE","url":"https://www.osalydconsulting.com/authors/julie-bredeche/"},"publisher":{"@type":"Organization","name":"Julie BREDECHE"}}</script>
+        <noscript>
+            <style>
+                img[loading] {
                     opacity: 1;
-                }</style></noscript><meta name="viewport" content="width=device-width,initial-scale=1"><style>body {
+                }
+            </style>
+        </noscript>	
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
     user-select: none; /* empêche la sélection de texte */
     -webkit-user-select: none;
     -ms-user-select: none;
-  }</style><link rel="icon" type="image/svg" href="https://www.osalydconsulting.com/media/files/favicon.svg"><script>document.addEventListener('contextmenu', event => event.preventDefault());
+  }
+</style>
+
+<link rel="icon" type="image/svg" href="https://www.osalydconsulting.com/media/files/favicon.svg">
+
+<script>
+  document.addEventListener('contextmenu', event => event.preventDefault());
   document.addEventListener('copy', event => event.preventDefault());
   document.addEventListener('cut', event => event.preventDefault());
-  document.addEventListener('paste', event => event.preventDefault());</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-94QFTSRYL9"></script><script>window.dataLayer = window.dataLayer || [];
+  document.addEventListener('paste', event => event.preventDefault());
+</script>
+
+<!-- Google tag (gtag.js) -->
+<!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-94QFTSRYL9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-94QFTSRYL9');</script><script type="application/ld+json">{
+  gtag('config', 'G-94QFTSRYL9');
+</script>
+
+<!-- Google search scheme -->
+<!--<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -38,7 +81,12 @@
       }
     }
   ]
-}</script></head><body class="post-template"><script>document.addEventListener("DOMContentLoaded", function () {
+}
+</script>
+    </head>
+    <body class="post-template">
+        <script>
+  document.addEventListener("DOMContentLoaded", function () {
     // Fonction réutilisable pour ajouter un "#" devant le texte
     function addHash(selector) {
       const links = document.querySelectorAll(selector);
@@ -55,7 +103,188 @@
 
     // 2️⃣ Pour les tags sous les cartes (Power Platform, etc.)
     addHash(".c-card__meta a");
-  });</script><header class="top js-header"><a class="logo" href="https://www.osalydconsulting.com/">Julie BREDECHE</a><nav class="navbar js-navbar"><button class="navbar__toggle js-toggle" aria-label="Menu" aria-haspopup="true" aria-expanded="false"><span class="navbar__toggle-box"><span class="navbar__toggle-inner">Menu</span></span></button><ul class="navbar__menu"><li><a href="https://www.osalydconsulting.com/" title="Page d&#x27;accueil" target="_self">Accueil</a></li><li><a href="https://www.osalydconsulting.com/authors/julie-bredeche/" title="Julie BREDECHE" target="_self">Qui suis-je ?</a></li><li><a href="https://www.osalydconsulting.com/ma-methode-infaillible/" target="_self">🥇 Ma méthode</a></li><li class="has-submenu"><a href="https://www.osalydconsulting.com/serie-agents-copilot/" target="_self" aria-haspopup="true">Série &quot;Agents Copilot de A à Z&quot;</a><ul class="navbar__submenu level-2" aria-hidden="true"><li><a href="https://www.osalydconsulting.com/art-du-prompting/" target="_self">E1 : L&#x27;art du prompt</a></li><li><a href="https://www.osalydconsulting.com/agent-copilot/" target="_self">E2 : Qu&#x27;est un agent Copilot ?</a></li><li><a href="https://www.osalydconsulting.com/creer-un-agent-avec-copilot-chat/" target="_self">E3 : Votre premier agent déclaratif</a></li><li><a href="https://www.osalydconsulting.com/agents-declaratifs-copilot-licensing/" target="_self">E4 : Quel agent avec quelle licence ?</a></li></ul></li></ul></nav><div class="search"><div class="search__overlay js-search-overlay"><div class="wrapper search__overlay-inner"></div></div><button class="search__btn btn--icon js-search-btn" aria-label="Search"><svg height="18" width="18" role="presentation" focusable="false"><use xlink:href="https://www.osalydconsulting.com/assets/svg/svg-map.svg#search"/></svg></button></div></header><main class="post"><article class="content"><div class="hero"><header class="hero__content"><div class="wrapper"><h1>Power Automate + AI Builder : des centaines d’heures gagnées grâce à la lecture automatique de PDF</h1><div class="feed__meta content__meta"><img src="https://www.osalydconsulting.com/media/website/Julie-Bredeche.png" loading="eager" height="1024" width="1024" class="feed__author-thumb" alt=""> <a href="https://www.osalydconsulting.com/authors/julie-bredeche/" class="feed__author">Julie BREDECHE</a> <time datetime="2025-11-24T13:47" class="feed__date">24 novembre 2025</time></div></div></header><figure class="hero__image"><div class="hero__image-wrapper"><img src="https://www.osalydconsulting.com/media/posts/16/Vignette-Power-Automate-2.png" srcset="https://www.osalydconsulting.com/media/posts/16/responsive/Vignette-Power-Automate-2-xs.png 640w, https://www.osalydconsulting.com/media/posts/16/responsive/Vignette-Power-Automate-2-sm.png 768w, https://www.osalydconsulting.com/media/posts/16/responsive/Vignette-Power-Automate-2-md.png 1024w, https://www.osalydconsulting.com/media/posts/16/responsive/Vignette-Power-Automate-2-lg.png 1366w, https://www.osalydconsulting.com/media/posts/16/responsive/Vignette-Power-Automate-2-xl.png 1600w, https://www.osalydconsulting.com/media/posts/16/responsive/Vignette-Power-Automate-2-2xl.png 1920w" sizes="88vw" loading="eager" height="200" width="200" alt=""></div></figure></div><div class="entry-wrapper content__entry"><h3>Le besoin initial</h3><p>Un de mes clients devait <strong>récupérer les numéros de commande inscrits dans plusieurs milliers de factures PDF</strong> afin de les injecter dans un nouvel outil de suivi de facturation.</p><p>La bonne nouvelle, c'est que le numéro de commande suit un format très reconnaissable, du type <strong data-start="724" data-end="740">“ABC123456A” </strong>→ 3 lettres, 6 chiffres, 1 lettre.<br data-start="777" data-end="780">Idéal pour une extraction via <strong data-start="810" data-end="842">expression régulière (RegEx)</strong>.</p><h3>Les prérequis</h3><p data-start="872" data-end="920">Pour mettre en place la solution, il vous faut :</p><ul><li data-start="924" data-end="1041">Une bibliothèque SharePoint (ou un dossier OneDrive) contenant les PDF à analyser </li><li data-start="1044" data-end="1140">Une Power Automate standard + des crédits AI Builder / Copilot disponible sur votre environnement pour la reconnaissance de texte</li><li data-start="1143" data-end="1257">Un format de numéro de commande clairement identifiable, par exemple :<br data-start="1213" data-end="1216"><code>[3 lettres][6 chiffres][1 lettre]</code></li><li data-start="1260" data-end="1332">Un fichier Excel configuré pour exécuter une RegEx via un Office Script</li></ul><h3>⭐ Les étapes du flux Power Automate</h3><p>Créez un flux avec le déclencheur de votre choix.</p><p>Ici, nous allons nous concentrer sur la lecture d'un PDF et récupération du numéro de commande.</p><h4>1. Récupérer le contenu du PDF</h4><p data-start="101" data-end="396">Ajoutez l'action <strong>Get file content using path</strong> (<em>Obtenir du contenu de fichier à l’aide du chemin d’accès</em>) et configurer les paramètres suivants : </p><ul><li data-start="400" data-end="490"><strong data-start="400" data-end="418">Site Address :</strong> l’adresse du site SharePoint qui contient la bibliothèque de documents avec les PDF</li><li data-start="493" data-end="586"><strong data-start="493" data-end="508">File Path :</strong> sélectionnez le fichier à analyser en cliquant sur l’icône de dossier</li></ul><figure class="post__image post__image--center"><img loading="lazy" src="https://www.osalydconsulting.com/media/posts/16//2025-11-24-13_33_34-ChatGPT-Site-Web-Osalyd.png" alt="" width="763" height="224" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_33_34-ChatGPT-Site-Web-Osalyd-xs.png 640w, https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_33_34-ChatGPT-Site-Web-Osalyd-sm.png 768w, https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_33_34-ChatGPT-Site-Web-Osalyd-md.png 1024w, https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_33_34-ChatGPT-Site-Web-Osalyd-lg.png 1366w, https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_33_34-ChatGPT-Site-Web-Osalyd-xl.png 1600w, https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_33_34-ChatGPT-Site-Web-Osalyd-2xl.png 1920w"></figure><h4>2. Extraire le contenu du PDF</h4><p>Ajouter l'action <strong>Recognize text in image or document</strong> (<em>Reconnaître le texte dans une image ou un document PDF</em>)  et configurez-la comme indiqué ci-dessous :</p><figure class="post__image post__image--center"><img loading="lazy" src="https://www.osalydconsulting.com/media/posts/16//2025-11-24-13_34_22-ChatGPT-Site-Web-Osalyd.png" alt="" width="1442" height="497" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_34_22-ChatGPT-Site-Web-Osalyd-xs.png 640w, https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_34_22-ChatGPT-Site-Web-Osalyd-sm.png 768w, https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_34_22-ChatGPT-Site-Web-Osalyd-md.png 1024w, https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_34_22-ChatGPT-Site-Web-Osalyd-lg.png 1366w, https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_34_22-ChatGPT-Site-Web-Osalyd-xl.png 1600w, https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_34_22-ChatGPT-Site-Web-Osalyd-2xl.png 1920w"></figure><p>Cette action renvoie le contenu du PDF sous forme de texte brut, que l’on pourra analyser ensuite.</p><p class="msg msg--info">L'action fonctionne aussi bien pour des PDF texte ou des PDF scannés (images lues avec OCR)</p><h4>3. Créer l’Office Script pour exécuter la RegEx</h4><ul><li data-start="2127" data-end="2187">Créez un fichier Excel stocké dans SharePoint ou OneDrive</li><li data-start="2191" data-end="2260">Ouvrez-le, puis cliquez sur l’onglet <strong data-start="2228" data-end="2240">Automate</strong> → <strong data-start="2243" data-end="2257">New Script</strong></li></ul><figure class="post__image post__image--center"><img loading="lazy" src="https://www.osalydconsulting.com/media/posts/16/2025-11-26-14_42_37-Site-Web-Osalyd-Structure-article-Power-Automate.png" alt="" width="1068" height="370" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://www.osalydconsulting.com/media/posts/16/responsive/2025-11-26-14_42_37-Site-Web-Osalyd-Structure-article-Power-Automate-xs.png 640w, https://www.osalydconsulting.com/media/posts/16/responsive/2025-11-26-14_42_37-Site-Web-Osalyd-Structure-article-Power-Automate-sm.png 768w, https://www.osalydconsulting.com/media/posts/16/responsive/2025-11-26-14_42_37-Site-Web-Osalyd-Structure-article-Power-Automate-md.png 1024w, https://www.osalydconsulting.com/media/posts/16/responsive/2025-11-26-14_42_37-Site-Web-Osalyd-Structure-article-Power-Automate-lg.png 1366w, https://www.osalydconsulting.com/media/posts/16/responsive/2025-11-26-14_42_37-Site-Web-Osalyd-Structure-article-Power-Automate-xl.png 1600w, https://www.osalydconsulting.com/media/posts/16/responsive/2025-11-26-14_42_37-Site-Web-Osalyd-Structure-article-Power-Automate-2xl.png 1920w"></figure><ul><li><span style="font-size: inherit;">Supprimez le code par défaut et remplacez-le par :</span><br><br></li></ul><pre class="language-typescript"><code>function main
+  });
+</script><header class="top js-header">
+   <a class="logo" href="https://www.osalydconsulting.com/">
+         Julie BREDECHE
+   </a>
+         <nav class="navbar js-navbar">
+            <button
+               class="navbar__toggle js-toggle"
+               aria-label="Menu"
+               aria-haspopup="true"
+               aria-expanded="false">
+               <span class="navbar__toggle-box">
+                  <span class="navbar__toggle-inner">Menu</span>
+               </span>
+            </button>
+          <ul class="navbar__menu">
+                   <li>
+                     <a
+                        href="https://www.osalydconsulting.com/"
+                           title="Page d&#x27;accueil"
+                           target="_self"
+      >
+                        Accueil
+                    </a>
+      
+               </li>
+                   <li>
+                     <a
+                        href="https://www.osalydconsulting.com/authors/julie-bredeche/"
+                           title="Julie BREDECHE"
+                           target="_self"
+      >
+                        Qui suis-je ?
+                    </a>
+      
+               </li>
+                   <li>
+                     <a
+                        href="https://www.osalydconsulting.com/ma-methode-infaillible/"
+                           target="_self"
+      >
+                        🥇 Ma méthode
+                    </a>
+      
+               </li>
+                   <li class="has-submenu">
+                     <a
+                        href="https://www.osalydconsulting.com/serie-agents-copilot/"
+                           target="_self"
+                           aria-haspopup="true"
+                        >
+                        Série &quot;Agents Copilot de A à Z&quot;
+                    </a>
+      
+                         <ul class="navbar__submenu level-2" aria-hidden="true" >
+                                  <li>
+                                    <a
+                                       href="https://www.osalydconsulting.com/art-du-prompting/"
+                                          target="_self"
+                     >
+                                       E1 : L&#x27;art du prompt
+                                   </a>
+                     
+                              </li>
+                                  <li>
+                                    <a
+                                       href="https://www.osalydconsulting.com/agent-copilot/"
+                                          target="_self"
+                     >
+                                       E2 : Qu&#x27;est un agent Copilot ?
+                                   </a>
+                     
+                              </li>
+                                  <li>
+                                    <a
+                                       href="https://www.osalydconsulting.com/creer-un-agent-avec-copilot-chat/"
+                                          target="_self"
+                     >
+                                       E3 : Votre premier agent déclaratif
+                                   </a>
+                     
+                              </li>
+                                  <li>
+                                    <a
+                                       href="https://www.osalydconsulting.com/agents-declaratifs-copilot-licensing/"
+                                          target="_self"
+                     >
+                                       E4 : Quel agent avec quelle licence ?
+                                   </a>
+                     
+                              </li>
+                         </ul>
+               </li>
+          </ul>
+         </nav>
+      <div class="search">
+         <div class="search__overlay js-search-overlay">
+            <div class="wrapper search__overlay-inner">
+                
+            </div>
+         </div>
+         <button class="search__btn btn--icon js-search-btn" aria-label="Search">
+            <svg height="18" width="18" role="presentation" focusable="false">
+               <use xlink:href="https://www.osalydconsulting.com/assets/svg/svg-map.svg#search"/>
+            </svg>
+         </button>
+      </div>
+</header>
+<main class="post">
+      <article class="content">
+         <div class="hero ">
+            <header class="hero__content ">
+               <div class="wrapper">
+                  <h1>Power Automate + AI Builder : des centaines d’heures gagnées grâce à la lecture automatique de PDF</h1>
+                     <div class="feed__meta content__meta  ">
+                                 <img 
+                                    src="https://www.osalydconsulting.com/media/website/Julie-Bredeche.png" 
+                                     loading="eager"
+                                    height="1024"
+                                    width="1024"
+                                    class="feed__author-thumb" 
+                                    alt="">
+                              <a href="https://www.osalydconsulting.com/authors/julie-bredeche/" class="feed__author">Julie BREDECHE</a>
+
+                           <time datetime="2025-11-24T13:47" class="feed__date">
+                                 24 novembre 2025
+                           </time>
+                     </div>
+                </div>
+            </header>
+
+                  <figure class="hero__image">  
+                     <div class="hero__image-wrapper">                    
+                        <img
+                           src="https://www.osalydconsulting.com/media/posts/16/Vignette-Power-Automate-2.png"
+                              srcset="https://www.osalydconsulting.com/media/posts/16/responsive/Vignette-Power-Automate-2-xs.png 640w ,https://www.osalydconsulting.com/media/posts/16/responsive/Vignette-Power-Automate-2-sm.png 768w ,https://www.osalydconsulting.com/media/posts/16/responsive/Vignette-Power-Automate-2-md.png 1024w ,https://www.osalydconsulting.com/media/posts/16/responsive/Vignette-Power-Automate-2-lg.png 1366w ,https://www.osalydconsulting.com/media/posts/16/responsive/Vignette-Power-Automate-2-xl.png 1600w ,https://www.osalydconsulting.com/media/posts/16/responsive/Vignette-Power-Automate-2-2xl.png 1920w" sizes="88vw"
+                            loading="eager"
+                           height="200"
+                           width="200"
+                           alt="">
+                        </div>
+                      
+                  </figure>
+         </div>
+
+         <div class="entry-wrapper content__entry">           
+            <h3>Le besoin initial</h3>
+<p>Un de mes clients devait <strong>récupérer les numéros de commande inscrits dans plusieurs milliers de factures PDF</strong> afin de les injecter dans un nouvel outil de suivi de facturation.</p>
+<p>La bonne nouvelle, c'est que le numéro de commande suit un format très reconnaissable, du type <strong data-start="724" data-end="740">“ABC123456A” </strong>→ 3 lettres, 6 chiffres, 1 lettre.<br data-start="777" data-end="780">Idéal pour une extraction via <strong data-start="810" data-end="842">expression régulière (RegEx)</strong>.</p>
+<h3>Les prérequis</h3>
+<p data-start="872" data-end="920">Pour mettre en place la solution, il vous faut :</p>
+<ul>
+<li data-start="924" data-end="1041">Une bibliothèque SharePoint (ou un dossier OneDrive) contenant les PDF à analyser </li>
+<li data-start="1044" data-end="1140">Une Power Automate standard + des crédits AI Builder / Copilot disponible sur votre environnement pour la reconnaissance de texte</li>
+<li data-start="1143" data-end="1257">Un format de numéro de commande clairement identifiable, par exemple :<br data-start="1213" data-end="1216"><code>[3 lettres][6 chiffres][1 lettre]</code></li>
+<li data-start="1260" data-end="1332">Un fichier Excel configuré pour exécuter une RegEx via un Office Script</li>
+</ul>
+<h3>⭐ Les étapes du flux Power Automate</h3>
+<p>Créez un flux avec le déclencheur de votre choix.</p>
+<p>Ici, nous allons nous concentrer sur la lecture d'un PDF et récupération du numéro de commande.</p>
+<h4>1. Récupérer le contenu du PDF</h4>
+<p data-start="101" data-end="396">Ajoutez l'action <strong>Get file content using path</strong> (<em>Obtenir du contenu de fichier à l’aide du chemin d’accès</em>) et configurer les paramètres suivants : </p>
+<ul>
+<li data-start="400" data-end="490"><strong data-start="400" data-end="418">Site Address :</strong> l’adresse du site SharePoint qui contient la bibliothèque de documents avec les PDF</li>
+<li data-start="493" data-end="586"><strong data-start="493" data-end="508">File Path :</strong> sélectionnez le fichier à analyser en cliquant sur l’icône de dossier</li>
+</ul>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://www.osalydconsulting.com/media/posts/16//2025-11-24-13_33_34-ChatGPT-Site-Web-Osalyd.png" alt="" width="763" height="224" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_33_34-ChatGPT-Site-Web-Osalyd-xs.png 640w ,https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_33_34-ChatGPT-Site-Web-Osalyd-sm.png 768w ,https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_33_34-ChatGPT-Site-Web-Osalyd-md.png 1024w ,https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_33_34-ChatGPT-Site-Web-Osalyd-lg.png 1366w ,https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_33_34-ChatGPT-Site-Web-Osalyd-xl.png 1600w ,https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_33_34-ChatGPT-Site-Web-Osalyd-2xl.png 1920w"></figure>
+<h4>2. Extraire le contenu du PDF</h4>
+<p>Ajouter l'action <strong>Recognize text in image or document</strong> (<em>Reconnaître le texte dans une image ou un document PDF</em>)  et configurez-la comme indiqué ci-dessous :</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://www.osalydconsulting.com/media/posts/16//2025-11-24-13_34_22-ChatGPT-Site-Web-Osalyd.png" alt="" width="1442" height="497" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_34_22-ChatGPT-Site-Web-Osalyd-xs.png 640w ,https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_34_22-ChatGPT-Site-Web-Osalyd-sm.png 768w ,https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_34_22-ChatGPT-Site-Web-Osalyd-md.png 1024w ,https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_34_22-ChatGPT-Site-Web-Osalyd-lg.png 1366w ,https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_34_22-ChatGPT-Site-Web-Osalyd-xl.png 1600w ,https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_34_22-ChatGPT-Site-Web-Osalyd-2xl.png 1920w"></figure>
+<p>Cette action renvoie le contenu du PDF sous forme de texte brut, que l’on pourra analyser ensuite.</p>
+<p class="msg msg--info">L'action fonctionne aussi bien pour des PDF texte ou des PDF scannés (images lues avec OCR)</p>
+<h4>3. Créer l’Office Script pour exécuter la RegEx</h4>
+<ul>
+<li data-start="2127" data-end="2187">Créez un fichier Excel stocké dans SharePoint ou OneDrive</li>
+<li data-start="2191" data-end="2260">Ouvrez-le, puis cliquez sur l’onglet <strong data-start="2228" data-end="2240">Automate</strong> → <strong data-start="2243" data-end="2257">New Script</strong></li>
+</ul>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://www.osalydconsulting.com/media/posts/16/2025-11-26-14_42_37-Site-Web-Osalyd-Structure-article-Power-Automate.png" alt="" width="1068" height="370" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://www.osalydconsulting.com/media/posts/16/responsive/2025-11-26-14_42_37-Site-Web-Osalyd-Structure-article-Power-Automate-xs.png 640w ,https://www.osalydconsulting.com/media/posts/16/responsive/2025-11-26-14_42_37-Site-Web-Osalyd-Structure-article-Power-Automate-sm.png 768w ,https://www.osalydconsulting.com/media/posts/16/responsive/2025-11-26-14_42_37-Site-Web-Osalyd-Structure-article-Power-Automate-md.png 1024w ,https://www.osalydconsulting.com/media/posts/16/responsive/2025-11-26-14_42_37-Site-Web-Osalyd-Structure-article-Power-Automate-lg.png 1366w ,https://www.osalydconsulting.com/media/posts/16/responsive/2025-11-26-14_42_37-Site-Web-Osalyd-Structure-article-Power-Automate-xl.png 1600w ,https://www.osalydconsulting.com/media/posts/16/responsive/2025-11-26-14_42_37-Site-Web-Osalyd-Structure-article-Power-Automate-2xl.png 1920w"></figure>
+<ul>
+<li><span style="font-size: inherit;">Supprimez le code par défaut et remplacez-le par :</span><br><br></li>
+</ul>
+<pre class="language-typescript"><code>function main
     (
         workbook: ExcelScript.Workbook, inputString: string, pattern: string, flags: string
     ): Array&lt;string&gt; {
@@ -67,7 +296,66 @@
     } else {
         return [];
     }
-}</code></pre><p>⚠️ <strong><em>Ce code n'a pas besoin d'être modifié, la RegEx sera définie dans Power Automate.</em></strong></p><ul><li>Renommez le script afin de le retrouver facilement dans Power Automate.</li></ul><h4>4. Exécuter l'Office Script dans Power Automate</h4><p data-start="61" data-end="197">Ajoutez ensuite l’action <strong data-start="2770" data-end="2784">Run script</strong> (Exécuter un script) puis sélectionner le fichier Excel précédemment créé.</p><p data-start="199" data-end="241">Indiquez ensuite les 3 paramètres qui vont permettre de spécifier comment la RegEx doit être exécutée :</p><ul><li data-start="245" data-end="405"><strong data-start="245" data-end="260">inputString</strong> : le texte extrait du PDF (contenu dynamique)</li><li data-start="408" data-end="459"><strong data-start="408" data-end="419">pattern</strong> : votre expression régulière, dans notre exemple :<br data-start="3060" data-end="3063"><code data-start="3065" data-end="3093">[A-Z]{3}\d{6}[A-Z]$</code></li><li data-start="462" data-end="512"><strong data-start="462" data-end="471">flags</strong> : vos modificateurs RegEx (<code data-start="3135" data-end="3138">g</code>, <code data-start="3140" data-end="3143">i</code>)</li></ul><p> </p><figure class="post__image post__image--center"><img loading="lazy" src="https://www.osalydconsulting.com/media/posts/16//2025-11-24-13_43_47-ChatGPT-Site-Web-Osalyd.png" alt="" width="1431" height="879" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_43_47-ChatGPT-Site-Web-Osalyd-xs.png 640w, https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_43_47-ChatGPT-Site-Web-Osalyd-sm.png 768w, https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_43_47-ChatGPT-Site-Web-Osalyd-md.png 1024w, https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_43_47-ChatGPT-Site-Web-Osalyd-lg.png 1366w, https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_43_47-ChatGPT-Site-Web-Osalyd-xl.png 1600w, https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_43_47-ChatGPT-Site-Web-Osalyd-2xl.png 1920w"></figure><p data-start="2880" data-end="2939">Le script renverra le numéro de commande détecté — ou une liste vide si aucun match.</p><h4 data-start="2880" data-end="2939">5. Exploiter le numéro de commande</h4><p data-start="3287" data-end="3319">Une fois récupéré, vous pouvez exploiter ce numéro dans de commande dans la suite du flux, comme par exemple :</p><ul><li data-start="3323" data-end="3366">L’enregistrer dans une colonne SharePoint</li><li data-start="3369" data-end="3404">Mettre à jour une table Dataverse</li><li data-start="3407" data-end="3440">L’ajouter dans un tableau Excel</li><li data-start="3443" data-end="3473">Envoyer un email de contrôle</li><li data-start="3476" data-end="3522">Ou encore alimenter un outil de SAV / helpdesk</li></ul><h3 data-start="3475" data-end="3529"><strong data-start="3478" data-end="3529">⚠️ Limites, pièges courants et bonnes pratiques</strong></h3><ul><li data-start="3583" data-end="3637">Les PDF scannés nécessitent de l’OCR via AI Builder</li><li data-start="3640" data-end="3720">Vérifiez que le numéro de commande est réellement unique dans chaque document</li><li data-start="3723" data-end="3805">Prévoyez un scénario “aucun numéro trouvé” pour éviter les erreurs silencieuses</li><li data-start="3808" data-end="3894">Conservez un journal d’erreurs dans une liste dédiée </li></ul><h3>✅ Conclusion</h3><p data-start="87" data-end="343">Avec ce flux Power Automate, l’extraction d’un numéro de commande dans des milliers de PDF devient un processus rapide et entièrement automatisé ! Plus besoin d’ouvrir chaque fichier : le texte est reconnu, analysé, puis exploité selon les besoins.</p><p data-start="345" data-end="603" data-is-last-node="" data-is-only-node="">C’est un exemple concret du gain de temps et de fiabilité que l’automatisation peut apporter aux métiers ! Et surtout, la solution reste évolutive : nouveaux formats, nouveaux champs à extraire, intégration à d’autres process… tout peut s’adapter en quelques clics.</p></div><footer class="content__footer"><div class="entry-wrapper"><div class="content__actions"><ul class="content__tag"><li><a href="https://www.osalydconsulting.com/tags/powerautomate/">PowerAutomate</a></li></ul></div></div></footer></article><div class="banner banner--after-content"><div class="wrapper"><script>document.addEventListener("DOMContentLoaded", function() {
+}</code></pre>
+<p>⚠️ <strong><em>Ce code n'a pas besoin d'être modifié, la RegEx sera définie dans Power Automate.</em></strong></p>
+<ul>
+<li>Renommez le script afin de le retrouver facilement dans Power Automate.</li>
+</ul>
+<h4>4. Exécuter l'Office Script dans Power Automate</h4>
+<p data-start="61" data-end="197">Ajoutez ensuite l’action <strong data-start="2770" data-end="2784">Run script</strong> (Exécuter un script) puis sélectionner le fichier Excel précédemment créé.</p>
+<p data-start="199" data-end="241">Indiquez ensuite les 3 paramètres qui vont permettre de spécifier comment la RegEx doit être exécutée :</p>
+<ul>
+<li data-start="245" data-end="405"><strong data-start="245" data-end="260">inputString</strong> : le texte extrait du PDF (contenu dynamique)</li>
+<li data-start="408" data-end="459"><strong data-start="408" data-end="419">pattern</strong> : votre expression régulière, dans notre exemple :<br data-start="3060" data-end="3063"><code data-start="3065" data-end="3093">[A-Z]{3}\d{6}[A-Z]$</code></li>
+<li data-start="462" data-end="512"><strong data-start="462" data-end="471">flags</strong> : vos modificateurs RegEx (<code data-start="3135" data-end="3138">g</code>, <code data-start="3140" data-end="3143">i</code>)</li>
+</ul>
+<p> </p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://www.osalydconsulting.com/media/posts/16//2025-11-24-13_43_47-ChatGPT-Site-Web-Osalyd.png" alt="" width="1431" height="879" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_43_47-ChatGPT-Site-Web-Osalyd-xs.png 640w ,https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_43_47-ChatGPT-Site-Web-Osalyd-sm.png 768w ,https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_43_47-ChatGPT-Site-Web-Osalyd-md.png 1024w ,https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_43_47-ChatGPT-Site-Web-Osalyd-lg.png 1366w ,https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_43_47-ChatGPT-Site-Web-Osalyd-xl.png 1600w ,https://www.osalydconsulting.com/media/posts/16//responsive/2025-11-24-13_43_47-ChatGPT-Site-Web-Osalyd-2xl.png 1920w"></figure>
+<p data-start="2880" data-end="2939">Le script renverra le numéro de commande détecté — ou une liste vide si aucun match.</p>
+<h4 data-start="2880" data-end="2939">5. Exploiter le numéro de commande</h4>
+<p data-start="3287" data-end="3319">Une fois récupéré, vous pouvez exploiter ce numéro dans de commande dans la suite du flux, comme par exemple :</p>
+<ul>
+<li data-start="3323" data-end="3366">L’enregistrer dans une colonne SharePoint</li>
+<li data-start="3369" data-end="3404">Mettre à jour une table Dataverse</li>
+<li data-start="3407" data-end="3440">L’ajouter dans un tableau Excel</li>
+<li data-start="3443" data-end="3473">Envoyer un email de contrôle</li>
+<li data-start="3476" data-end="3522">Ou encore alimenter un outil de SAV / helpdesk</li>
+</ul>
+<h3 data-start="3475" data-end="3529"><strong data-start="3478" data-end="3529">⚠️ Limites, pièges courants et bonnes pratiques</strong></h3>
+<ul>
+<li data-start="3583" data-end="3637">Les PDF scannés nécessitent de l’OCR via AI Builder</li>
+<li data-start="3640" data-end="3720">Vérifiez que le numéro de commande est réellement unique dans chaque document</li>
+<li data-start="3723" data-end="3805">Prévoyez un scénario “aucun numéro trouvé” pour éviter les erreurs silencieuses</li>
+<li data-start="3808" data-end="3894">Conservez un journal d’erreurs dans une liste dédiée </li>
+</ul>
+<h3>✅ Conclusion</h3>
+<p data-start="87" data-end="343">Avec ce flux Power Automate, l’extraction d’un numéro de commande dans des milliers de PDF devient un processus rapide et entièrement automatisé ! Plus besoin d’ouvrir chaque fichier : le texte est reconnu, analysé, puis exploité selon les besoins.</p>
+<p data-start="345" data-end="603" data-is-last-node="" data-is-only-node="">C’est un exemple concret du gain de temps et de fiabilité que l’automatisation peut apporter aux métiers ! Et surtout, la solution reste évolutive : nouveaux formats, nouveaux champs à extraire, intégration à d’autres process… tout peut s’adapter en quelques clics.</p>            
+         </div>
+
+            <footer class="content__footer">
+               <div class="entry-wrapper">
+
+                     <div class="content__actions">
+                              <ul class="content__tag">
+                                    <li>
+                                       <a href="https://www.osalydconsulting.com/tags/powerautomate/">PowerAutomate</a>
+                                    </li>
+                              </ul>
+
+                     </div>
+
+               </div>
+
+            </footer>
+      </article>
+
+
+
+         <div class="banner banner--after-content">
+            <div class="wrapper">
+               <script>
+  document.addEventListener("DOMContentLoaded", function() {
     const currentUrl = encodeURIComponent(window.location.href);
     const pageTitle = encodeURIComponent(document.title);
 
@@ -82,7 +370,56 @@
     document.getElementById("share-email").href = emailUrl;
   });
     
-    document.querySelector('.hero__image-wrapper')?.remove();</script><div class="share-bar"><p>📢 Partagez cet article :</p><div class="share-buttons"><a id="share-linkedin" href="#" target="_blank" rel="noopener noreferrer" title="Partager sur LinkedIn"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="28" height="28"> </a><a id="share-twitter" href="#" target="_blank" rel="noopener noreferrer" title="Partager sur Twitter"><img src="https://cdn-icons-png.flaticon.com/512/5969/5969020.png" alt="Twitter X" width="28" height="28"> </a><a id="share-email" href="#" title="Partager par e-mail"><img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="E-mail" width="28" height="28"></a></div></div></div></div></main><footer class="footer"><div class="wrapper"><div class="footer__copyright"><p>© 2026 Osalyd Consulting. Tous droits réservés.</p></div><div class="footer__social"><a href="https://www.linkedin.com/in/juliebredeche/" aria-label="LinkedIn"><svg><use xlink:href="https://www.osalydconsulting.com/assets/svg/svg-map.svg#linkedin"/></svg></a></div><button id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top"><svg width="20" height="20"><use xlink:href="https://www.osalydconsulting.com/assets/svg/svg-map.svg#toparrow"/></svg></button></div></footer><script defer="defer" src="https://www.osalydconsulting.com/assets/js/scripts.min.js?v=ffcbea6c02c8178d10092962b235a5b0"></script><script>window.publiiThemeMenuConfig={mobileMenuMode:'sidebar',animationSpeed:300,submenuWidth: 'auto',doubleClickTime:500,mobileMenuExpandableSubmenus:true,relatedContainerForOverlayMenuSelector:'.top'};</script><script>var images = document.querySelectorAll('img[loading]');
+    document.querySelector('.hero__image-wrapper')?.remove();
+</script>
+
+<div class="share-bar">
+  <p>📢 Partagez cet article :</p>
+  <div class="share-buttons">
+    <a id="share-linkedin" href="#" target="_blank" rel="noopener noreferrer" title="Partager sur LinkedIn">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="28" height="28">
+    </a>
+    <a id="share-twitter" href="#" target="_blank" rel="noopener noreferrer" title="Partager sur Twitter">
+      <img src="https://cdn-icons-png.flaticon.com/512/5969/5969020.png" alt="Twitter X" width="28" height="28">
+    </a>
+    <a id="share-email" href="#" title="Partager par e-mail">
+      <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="E-mail" width="28" height="28">
+    </a>
+  </div>
+</div>
+            </div>
+         </div>
+
+</main>
+<footer class="footer ">
+    <div class="wrapper">
+        
+            <div class="footer__copyright">
+                <p>© 2026 Osalyd Consulting. Tous droits réservés.</p>
+            </div>
+
+            <div class="footer__social">
+                    <a href="https://www.linkedin.com/in/juliebredeche/" aria-label="LinkedIn">
+                        <svg>
+                            <use xlink:href="https://www.osalydconsulting.com/assets/svg/svg-map.svg#linkedin"/>
+                        </svg>
+                    </a>
+            </div>
+        
+            <button id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top">
+                <svg width="20" height="20">
+                    <use xlink:href="https://www.osalydconsulting.com/assets/svg/svg-map.svg#toparrow"/>
+                </svg>
+            </button>
+    </div>
+</footer>
+
+<script defer src="https://www.osalydconsulting.com/assets/js/scripts.min.js?v=ffcbea6c02c8178d10092962b235a5b0"></script>
+
+<script>window.publiiThemeMenuConfig={mobileMenuMode:'sidebar',animationSpeed:300,submenuWidth: 'auto',doubleClickTime:500,mobileMenuExpandableSubmenus:true,relatedContainerForOverlayMenuSelector:'.top'};</script>
+
+    <script>        
+        var images = document.querySelectorAll('img[loading]');
         for (var i = 0; i < images.length; i++) {
             if (images[i].complete) {
                 images[i].classList.add('is-loaded');
@@ -91,4 +428,11 @@
                     this.classList.add('is-loaded');
                 }, false);
             }
-        }</script></body></html>
+        }
+    </script>
+
+
+
+
+</body>
+</html>
