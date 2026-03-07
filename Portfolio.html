@@ -973,7 +973,7 @@
                         "Automated flow that scans documents in a SharePoint library",
                         "<b>OCR reading</b> of PDF content via AI Builder to <b>extract order numbers</b> using REGEX",
                         "<b>Automatic renaming</b> of valid files and <b>moving non-compliant cases</b> to a review folder"
-                    ],
+                        ],
 
                 },
                 technologies: ["Power Automate", "AI Builder", "SharePoint"],
@@ -1005,105 +1005,82 @@
                 }
             },
             {
-                title: {
-                    fr: "Classement automatisé des contrats vers une Contrathèque",
-                    en: "Automated classification of contracts into a Contract library"
-                },
+  title: {
+    fr: "Classement automatisé des contrats signés vers une contrathèque SharePoint",
+    en: "Automated classification of signed contracts into a SharePoint contract library"
+  },
 
-                mainTool: "Power Automate",
+  mainTool: "Power Automate",
 
-                industry: {
-                    fr: "Achats",
-                    en: "Procurement"
-                },
+  industry: {
+    fr: "Achats",
+    en: "Procurement"
+  },
 
-                users: {
-                    fr: "<ul><li>Service Achats (10 personnes)</li><li>Environ 50 contrats finalisés par mois à classer</li><li>De nombreux documents de travail mélangés aux contrats signés</li></ul>",
-                    en: "<ul><li>Procurement department (10 people)</li><li>About 50 finalized contracts per month to classify</li><li>Lots of working documents mixed with signed contracts</li></ul>"
-                },
+  users: {
+    fr: "<ul><li>Service Achats (10 personnes)</li><li>Environ 50 contrats finalisés par mois à classer</li><li>De nombreux documents de travail mélangés aux contrats signés</li></ul>",
+    en: "<ul><li>Procurement department (10 people)</li><li>About 50 finalized contracts per month to classify</li><li>Lots of working documents mixed with signed contracts</li></ul>"
+  },
 
-                problem: {
-                    fr: "<p>Les contrats finalisés se retrouvaient dispersés parmi des documents de travail.</p><p class=\"saut-ligne\">Résultat : une <b>recherche manuelle</b> longue et aléatoire dans de nombreux dossiers avant de trouver le dernier contrat en vigueur, ou l'historique des contrats liés à un fournisseur.</p>",
-                    en: "<p>Finalized contracts were spread out among working documents. As a result, it took a long and random <b>manual searching process</b> through numerous files to find the latest valid contract, or the contract history for a given supplier.</p>"
-                },
+  problem: {
+    fr: "<p>Les contrats finalisés se retrouvaient dispersés parmi des documents de travail.</p><p class=\"saut-ligne\">Résultat : une <b>recherche manuelle</b> longue et aléatoire dans de nombreux dossiers avant de trouver le dernier contrat en vigueur, ou l'historique des contrats liés à un fournisseur.</p>",
+    en: "<p>Finalized contracts were spread out among working documents. As a result, it took a long and random <b>manual searching process</b> through numerous files to find the latest valid contract, or the contract history for a given supplier.</p>"
+  },
 
-                solution: {
+  solution: {
 
-                    fr: "<p>Un flux Power Automate qui ouvre un <b>formulaire de saisie des métadonnées</b> (fournisseur, montant, échéance, etc.), puis déplace le contrat vers une bibliothèque SharePoint dédiée.</p><p class=\"saut-ligne\">Un <b>moteur de recherche avec filtres avancés</b> pour retrouver instantanément les contrats grâce aux métadonnées renseignées.</p>",
-                    en: "<p>A Power Automate flow that opens a <b>metadata entry form</b> (vendor, amount, expiry date, etc.), then moves the contract to a dedicated SharePoint library.</p><p class=\"saut-ligne\">An <b>advanced filtering search engine</b> to instantly retrieve contracts using the entered metadata.</p>"
-                },
+  fr: "<p>Un flux Power Automate qui ouvre un <b>formulaire de saisie des métadonnées</b> (fournisseur, type, montant, échéance, etc.), puis déplace le contrat vers une bibliothèque SharePoint dédiée.</p><p class=\"saut-ligne\">Couplé à un <b>moteur de recherche avec filtres avancés</b> pour retrouver instantanément les contrats grâce aux métadonnées renseignées.</p>",
+en: "<p>A Power Automate flow that opens a <b>metadata entry form</b> (vendor, type, amount, expiry date, etc.), then moves the contract to a dedicated SharePoint library.</p><p class=\"saut-ligne\">Coupled with an <b>advanced filtering search engine</b> to instantly retrieve contracts using the entered metadata.</p>"  },
 
-                screenshots: [
-                    {
-                        url: "https://www.osalydconsulting.com/media/files/ImagesBook/Contratheque/Contratheque-BoutonEnvoi.png",
-                        title: { fr: "1. Bouton d'envoi vers la contrathèque", en: "1. Send to contract library button" }
-                    },
-                    {
-                        url: "https://www.osalydconsulting.com/media/files/ImagesBook/Contratheque/Contratheque-Form.png",
-                        title: { fr: "2. Formulaire de saisie des métadonnées", en: "2. Metadata entry form" }
-                    },
-                    {
-                        url: "https://www.osalydconsulting.com/media/files/ImagesBook/Contratheque/Contratheque-Classement.png",
-                        title: { fr: "3. Document déplacé dans la contrathèque", en: "3. Document moved to the contract library" }
-                    },
-                    {
-                        url: "https://www.osalydconsulting.com/media/files/ImagesBook/Contratheque/Contratheque-Recherche.png",
-                        title: { fr: "4. Moteur de recherche avancé", en: "4. Advanced search engine" }
-                    },
-                ],
+  screenshots: [],
 
-                features: {
-                    fr: [
-                        "<b>Déclenchement manuel</b> par bouton : ouverture du formulaire pour saisir les métadonnées",
-                        "<b>Formulaire</b> de saisie des métadonnées obligatoires (ex. fournisseur, type de contrat, date de fin, etc.)",
-                        "<b>Déplacement automatisé</b> du document vers la Contrathèque avec mise à jour des métadonnées",
-                        "<b>Alertes Teams</b> automatiques lorsqu’un contrat arrive à échéance",
-                        "<b>Mise à jour du statut</b> du contrat une fois la date de fin du contrat dépassée"
-                    ],
-                    en: [
-                        "<b>Manual trigger</b> via button: opens the form to enter metadata",
-                        "<b>Form</b> for entering mandatory metadata (e.g. vendor, contract type, end date, etc.)",
-                        "<b>Automated move</b> of the document to the Contract Library with metadata update",
-                        "<b>Automatic Teams alerts</b> when a contract is approaching its expiry date",
-                        "<b>Status update</b> of the contract once the contract end date has passed"
-                    ],
+  features: {
+    fr: [
+      "<b>Déclenchement manuel</b> par bouton : lancer le classement au moment où le contrat est finalisé",
+      "<b>Formulaire</b> de saisie/validation des métadonnées (ex. fournisseur, type, date de fin, statut, etc.)",
+      "<b>Déplacement automatisé</b> du document vers la bibliothèque « Contrats signés » avec mise à jour des métadonnées",
+      "<b>Alertes Teams</b> automatiques lorsqu’un contrat approche de son échéance",
+      "<b>Mise à jour du statut</b> du contrat une fois la date de fin dépassée (ex. « Expiré »)"
+    ],
+    en: [
+      "<b>Manual trigger</b> via button: run classification when the contract is finalized",
+      "<b>Form</b> to enter/validate metadata (e.g., vendor, type, end date, status, etc.)",
+      "<b>Automated move</b> to the “Signed contracts” library with metadata update",
+      "<b>Teams alerts</b> when a contract is approaching its end date",
+      "<b>Status update</b> once the end date is passed (e.g., “Expired”)"
+    ]
+  },
 
-                },
+  technologies: ["SharePoint", "Power Automate", "Microsoft Teams"],
 
-                technologies: ["SharePoint", "Power Automate", "Forms", "Teams"],
+  devices: ["PC"],
 
-                devices: ["PC"],
+  userBenefits: {
+    fr: [
+      "Classement guidé et homogène : moins d’erreurs et moins d’oublis de métadonnées",
+      "Recherche plus rapide : filtres par fournisseur, type, statut, échéance, etc.",
+      "Alertes proactives dans Teams pour anticiper les renouvellements"
+    ],
+    en: [
+      "Guided, consistent classification: fewer errors and fewer missing metadata",
+      "Faster retrieval: filters by vendor, type, status, expiry date, etc.",
+      "Proactive Teams alerts to anticipate renewals"
+    ]
+  },
 
-                userBenefits: {
-                    fr: [
-                        "<b>Classement guidé</b> en quelques clics grâce à un formulaire structuré.",
-                        "Temps de recherche <b>divisé par 3</b> grâce au moteur de recherche et aux filtres avancés",
-                        "<b>Alertes</b> proactives dans Teams pour anticiper les renouvellement de contrats"
-                    ],
-                    en: [
-                        "<b>Guided classification</b> in a few clicks thanks to a structured form.",
-                        "Search time <b>divided by 3</b> thanks to the search engine and advanced filters",
-                        "Proactive Teams <b>alerts</b>  to anticipate contract renewals"
-                    ],
-
-                },
-
-                businessValue: {
-                    fr: [
-                        "<b>Réduction des risques contractuels</b> grâce aux alertes automatiques",
-                        "<b>Gouvernance documentaire</b> renforcée et auditable",
-                        "<b>Gain de productivité</b> immédiat : moins de temps perdu à chercher, plus de temps à négocier"
-
-                    ],
-                    en: [
-                        "<b>Reduced contractual risk</b> thanks to automated alerts",
-                        "<b>Strengthened document governance</b> ready for audits",
-                        "<b>Immediate productivity gain</b>: less time searching, more time negotiating"
-                    ],
-
-
-                }
-            }
+  businessValue: {
+    fr: [
+      "Réduction du temps perdu à rechercher des contrats et amélioration de la productivité de l’équipe Achats",
+      "Réduction des risques : meilleur suivi des échéances et du statut contractuel",
+      "Gouvernance documentaire renforcée : bibliothèque unique des contrats signés, exploitable par la recherche"
+    ],
+    en: [
+      "Reduced time spent searching for contracts and improved productivity for the Procurement team",
+      "Risk reduction: better monitoring of contract expiry dates and status",
+      "Stronger document governance: single source of truth for signed contracts, searchable and filterable"
+    ]
+  }
+}
 
 
         ];
